@@ -6,7 +6,7 @@ from .utils import build_deb_package
 from django.contrib.auth.decorators import login_required
 
   # if you put it in builder.py
-@login_required(login_url='login')
+@login_required
 def upload_exe(request):
     if request.method == 'POST':
         form = ExeUploadForm(request.POST, request.FILES)
@@ -22,7 +22,7 @@ def upload_exe(request):
                     dest.write(chunk)
 
             # Call function to build the .deb package
-            deb_file = build_deb_package(app_name, exe_file.name, description)
+            deb_file = build_deb_package(app_name, exe_path, description)
 
             # Return success page with download link
             return render(request, 'builder/success.html', {
@@ -38,7 +38,6 @@ def upload_exe(request):
 import subprocess
 import shutil
 from pathlib import Path
-@login_required(login_url='login')
 
 def build_deb_package(app_name, exe_filename, description):
     base_path = Path("debuild") / app_name
@@ -60,7 +59,8 @@ def build_deb_package(app_name, exe_filename, description):
     # Move uploaded exe into /opt/<app_name>/
     source_exe = Path("media") / exe_filename
     dest_exe = opt_path / exe_filename
-    shutil.copy(source_exe, dest_exe)
+    if source_exe.resolve() != dest_exe.resolve():
+        shutil.copy(source_exe, dest_exe)
 
     # Write control file
     control_content = (

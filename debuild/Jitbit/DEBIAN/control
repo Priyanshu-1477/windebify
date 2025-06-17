@@ -5,4 +5,4 @@ Priority: optional
 Architecture: all
 Depends: wine
 Maintainer: You <you@example.com>
-Description: A Windows app packed into .deb
+Description: A macro reader widely used in windows
