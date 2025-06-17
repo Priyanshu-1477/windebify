@@ -1,0 +1,81 @@
+{% extends "builder/base.html" %}
+
+{% block title %}Upload EXE – Windebify{% endblock %}
+
+{% block extra_head %}
+<style>
+    .card {
+        background: white;
+        padding: 3rem 2.5rem;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        width: 100%;
+        max-width: 500px;
+        text-align: center;
+        margin: auto;
+        margin-top: 5vh;
+    }
+
+    h1 {
+        color: #1976d2;
+        margin-bottom: 1rem;
+    }
+
+    label {
+        display: block;
+        margin: 1rem 0 0.5rem;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    input[type="file"], input[type="text"] {
+        width: 100%;
+        padding: 0.7rem;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+    }
+
+    button {
+        background: #1976d2;
+        color: white;
+        padding: 0.8rem 2rem;
+        border: none;
+        border-radius: 8px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+
+    button:hover {
+        background: #0d47a1;
+    }
+
+    .footer {
+        margin-top: 1.5rem;
+        font-size: 0.85rem;
+        color: #666;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<form method="post" enctype="multipart/form-data" class="card">
+    {% csrf_token %}
+    <h1>🛠️ Windebify</h1>
+    <p>Convert your Windows EXE to a Linux DEB package</p>
+
+    <label for="exe_file">Select EXE File</label>
+    {{ form.exe_file }}
+
+    <label for="app_name">App Name</label>
+    {{ form.app_name }}
+
+    <label for="description">App Description</label>
+    {{ form.description }}
+
+    <button type="submit">🚀 Build Package</button>
+
+    <div class="footer">Made with ❤️ for Linux users</div>
+</form>
+{% endblock %}

@@ -1,0 +1,74 @@
+{% extends "builder/base.html" %}
+
+{% block title %}Build Successful – Windebify{% endblock %}
+
+{% block extra_head %}
+<style>
+    .card {
+        background: white;
+        padding: 3rem 2.5rem;
+        border-radius: 15px;
+        text-align: center;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        max-width: 600px;
+        margin: auto;
+        margin-top: 10vh;
+    }
+
+    h1 {
+        color: #2e7d32;
+        font-size: 2rem;
+    }
+
+    p {
+        margin: 1rem 0;
+        color: #555;
+    }
+
+    .info {
+        background: #f1f8e9;
+        padding: 0.8rem;
+        border-radius: 8px;
+        font-family: monospace;
+        font-size: 0.95rem;
+        color: #2e7d32;
+        margin-bottom: 1rem;
+    }
+
+    .download-btn {
+        display: inline-block;
+        background: #43a047;
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border-radius: 8px;
+        text-decoration: none;
+        font-size: 1rem;
+        transition: background 0.3s ease;
+    }
+
+    .download-btn:hover {
+        background: #2e7d32;
+    }
+
+    .footer {
+        margin-top: 2rem;
+        font-size: 0.9rem;
+        color: #777;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="card">
+    <h1>✅ Successfully built {{ app_name }}!</h1>
+    <p>Your .deb package is ready to download.</p>
+
+    <div class="info">
+        EXE Path: {{ exe_path }}
+    </div>
+
+    <a href="{{ deb_file }}" download class="download-btn">📦 Download .deb Package</a>
+
+    <div class="footer">Want to build another? <a href="/">Click here</a></div>
+</div>
+{% endblock %}
