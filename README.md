@@ -91,11 +91,23 @@ windebify/
 ## 📜 License
 This project is licensed under the MIT License. See LICENSE for more info.
 
+## 🔭 Future Scope
+
+- 🌐 Add multi-language support for international users  
+- 🧠 Integrate AI-based EXE analyzer to auto-fill metadata  
+- ☁️ Enable cloud storage integration (Google Drive, Dropbox) for EXE uploads  
+- 📦 Support batch conversion of multiple `.exe` files  
+- 🔐 Add user roles: Admin, Maintainer, Contributor  
+- 📝 Maintain build logs with timestamps for each user  
+- 📲 Add optional email notifications after build completion  
+- 🚀 One-click launch of packaged apps post-installation  
+- 🧪 Add testing framework and test coverage dashboard  
+- 📊 Include analytics for most-used apps and features  
+
 ## 🙋‍♂️ Contributing
 Contributions, suggestions and bug reports are welcome!
 Feel free to open issues or submit PRs to improve this tool.
 
 ## 📬 Contact
-Made with ❤️ by @priyanshu_raj
-
+Made with ❤️  by @priyanshu_raj
 Have a question? DM or create an issue on GitHub.
