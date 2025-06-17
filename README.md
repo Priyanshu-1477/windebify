@@ -2,7 +2,8 @@
 
 **Windebify** is a web-based tool that simplifies the process of converting `.exe` (Windows executable) files into `.deb` (Debian package) files using Wine. It’s designed with simplicity and style in mind — letting Linux users run or package `.exe` files in a user-friendly, one-click interface.
 
-![Screenshot](https://user-images.githubusercontent.com/your-screenshot-placeholder.png) <!-- Replace with actual screenshot URL -->
+![Screenshot](https://user-images.githubusercontent.com/![image](https://github.com/user-attachments/assets/939d2d86-2ce2-4647-b596-55c3fd6e1261)
+) <!-- Replace with actual screenshot URL -->
 
 ---
 
