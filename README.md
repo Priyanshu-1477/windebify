@@ -39,7 +39,7 @@
 ### 1. Clone the repository: 
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/windebify.git
+git clone https://github.com/Priyanshu-1477/windebify.git
 cd windebify
 ```
 
